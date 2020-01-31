@@ -19,7 +19,7 @@ export class TourListComponent implements OnInit {
     },
   ]
   @ViewChild('tour', { static: true }) tour: TemplateRef<any>;
-  currentTour: Object;
+  currentTour: any;
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {

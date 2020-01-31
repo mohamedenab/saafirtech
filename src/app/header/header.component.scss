@@ -1,0 +1,38 @@
+@import "../../assets/sass/var.scss";
+nav {
+  text-align: left;
+  background: #c2e9fb;
+  .logo {
+    width: 100%;
+    display: flex;
+    a{
+      color: #4087fb;
+    }
+    .navbar-brand {
+      max-width: 10%;
+      svg {
+        width: 100%;
+
+      }
+    }
+  }
+
+
+  .navbar-collapse {
+    width: 100%;
+    .navbar-nav {
+      .nav-link {
+        text-transform: capitalize;
+        font-weight: bold;
+        color: black;
+        &:hover {
+          cursor: pointer;
+          color: $seccolor;
+        }
+      }
+      .active {
+        color: $seccolor;
+      }
+    }
+  }
+}

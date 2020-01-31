@@ -1,0 +1,62 @@
+ @import "../../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+.cardList {
+  display: flex;
+  align-items: center;
+  margin: 1% 0;
+  width: 32%;
+  cursor: pointer;
+  box-shadow: none;
+  border: 1px solid lightgray;
+  &:hover {
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  img {
+    width: 100px;
+    margin: 0;
+  }
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    .mat-card-content {
+      margin: 0 16px 16px;
+    }
+    .titlePass {
+      font-weight: 500;
+    }
+  }
+  .price {
+    margin-left: auto;
+    margin-right: 2%;
+  }
+}
+.tour {
+  img {
+    width: 90%;
+  }
+  .tourbody {
+    padding: 2%;
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .date {
+      font-size: 12px;
+      font-weight: lighter;
+    }
+    .passengers,
+    .amount {
+      .maintitle {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .cont {
+        padding-left: 2%;
+        .subtitle {
+          font-weight: 500;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

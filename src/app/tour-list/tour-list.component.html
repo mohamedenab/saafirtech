@@ -1,0 +1,31 @@
+<ng-container *ngFor="let item of tourLists">
+    <mat-card class="cardList" (click)="openPopup(item)">
+        <img mat-card-image src="{{item.image}}" alt="Photo of a Shiba Inu">
+        <div class="cardBody">
+            <mat-card-header>
+                <mat-card-title>{{item.name}}</mat-card-title>
+                <mat-card-subtitle>{{item.date.day}},{{item.date.time}}</mat-card-subtitle>
+            </mat-card-header>
+        </div>
+
+    </mat-card>
+</ng-container>
+
+<ng-template #tour>
+    <div class="tour">
+        <img src="{{currentTour.image}}" alt="">
+        <div class="tourbody">
+            <div class="name">{{currentTour.name}}</div>
+            <div class="date">{{currentTour.date.day}},{{currentTour.date.time}}</div>
+            <div class="passengers">
+                <div class="maintitle">Passengers:</div>
+                <div class="cont"><span class="subtitle"> Adult: </span>
+                    <span> {{currentTour.passangersNo .adult}}</span>,<span class="subtitle"> Child: </span>
+                    <span>{{currentTour.passangersNo.child}}</span> ,
+                    <span class="subtitle">infant:</span> <span>{{currentTour.passangersNo.infant}}</span></div>
+            </div>
+            <div class="amount"><span class="maintitle"> Total Paid:</span> $ <span> {{currentTour.amountPaid}}</span>
+            </div>
+        </div>
+    </div>
+</ng-template>
